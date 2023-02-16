@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Mi perfil{% endblock %}
+{% load static %}
+{% block content %}
+<main>
+    <section class="profile">
+        <div class="profile-img">
+            <img src="{% static 'img/yo.jpg' %}" alt="">
+
+        </div>
+        <div class="profile-info">
+            <h2>
+
+            </h2>
+            <p> Mi nombre es Marcos Silvera, tengo 32 años, soy docente de Matemática y estudiante de ingeniería de computación. 
+                <br>
+                Como estudiante de programación he aprendido sobre las diferentes estructuras (listas, heap, arboles, grafos, etc..) y como estas afectan en el tiempo de un algoritmo. 
+                Los lenguajes de programación que más he utilizado hasta el momento son C++ y Python, con respecto a Python, he utilizado Django, un framework de desarrollo para Python que se emplea para la creación de páginas web. 
+                <br>
+                Lo que es programación y matemática me apasiona, por lo tanto, mi idea es compartir conocimiento sobre estos temas y otros que con el paso del tiempo logre adquirir, desde los más básicos. </p>
+
+        </div>
+    </section>
+
+    <section class="project-container">
+        <h3> Proyectos</h3>
+        {% for proyectos in proyectos %}
+        <div class="project">
+        
+            <h4>{{proyectos.title}}</h4>
+            <p>{{proyectos.desc}}</p>
+            <a class="blogs-btn" href="{{ proyectos.urls }}">Leer más</a>
+        
+        </div>
+        {% endfor %}
+    </section>
+ </main>
+{% endblock %}
+

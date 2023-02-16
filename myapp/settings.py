@@ -40,6 +40,7 @@ ALLOWED_HOSTS =  os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(
 INSTALLED_APPS = [
     # Mis apps
     'core.apps.CoreConfig',
+    'perfil.apps.PerfilConfig',
     #Django app
     'django.contrib.admin',
     'django.contrib.auth',
@@ -83,10 +84,8 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-#DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
-DEVELOPMENT_MODE = True
-
-
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+#DEVELOPMENT_MODE = True
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
