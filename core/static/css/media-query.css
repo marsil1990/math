@@ -1,0 +1,151 @@
+@media screen and (max-width: 1060px){
+    .posts{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 800px){
+    /*Pagina de Inicio */
+
+    /*Página de BLOGS */
+    .news{
+        padding: 20px;
+    }
+    .news-content{
+        grid-template-columns: auto auto;
+    }
+    .news-content img{
+        width: 90%;
+        padding: 10px;
+    }
+
+    .posts-blog{
+        max-width: 45%;
+    }
+    
+
+    /*Página de Blog*/
+    .main-blog{
+        padding: 20px;
+    }
+    .main-blog__content img{
+        padding: 0;
+    }
+    .blog-content__article{
+        padding: 0;
+    }
+
+    .section-contact{
+        padding: 20px;
+    }
+    .contact{
+        display: grid;
+        margin: 0px;
+    }
+
+    /*Página de Perfil*/
+    .profile{
+        padding: 20px;
+    }
+
+    .profile-img img{
+        width: 90%;
+    }
+
+    .projects-container{
+        padding: 20px;
+    }
+    .project{
+        max-width: 45%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    /*Pagina de Inicio */
+    .social-icons{
+        width: 100%;
+        padding: 0 5px 0;
+        margin: 0;
+    }
+    .nav-logo{
+        display: flex;
+        align-items: center;
+    }
+    .nav-logo, .nav-link{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .nav-logo img{
+        width: 150px;
+    }
+
+    .main-container__text{
+        font-size: 25px;
+    }
+
+    /*Página de BLOGS */
+    .blogs-main{
+        padding: 0;
+    }
+    .news{
+        width: 100%;
+        padding: 10px;
+    }
+    .news-content{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    .news-content img{
+        grid-row: 2;
+    }
+    .news-content .news-info{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .posts{
+        width: 100%;
+        padding: 10px;
+    }
+    .posts-blog{
+        max-width: 100%;
+    }
+
+    /*Página de Blog*/
+    .main-blog{
+        padding: 10px;
+    }
+    .main-blog__content img{
+        padding: 0;
+    }
+    .blog-content__article{
+        padding: 0;
+    }
+
+    .section-contact{
+        padding: 10px;
+        display: grid;
+    }
+    .contact{
+        display: grid;
+        margin: 0px;
+    }
+
+    /*Página de Perfil*/
+    .profile{
+        padding: 10px;
+        display: grid;
+    }
+
+    .profile-img img{
+        width: 100%;
+    }
+
+    .projects-container{
+        padding: 10px;
+    }
+    .project{
+        padding: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+}
