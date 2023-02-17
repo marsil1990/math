@@ -49,8 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #Ckeditor
-    'ckeditor',
+
 ]
 
 MIDDLEWARE = [
@@ -87,8 +86,8 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
-#DEVELOPMENT_MODE = True
+#DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+DEVELOPMENT_MODE = True
 
 if DEVELOPMENT_MODE is True:
     DATABASES = {
