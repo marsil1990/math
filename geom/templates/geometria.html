@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block estilo %} <link rel="stylesheet" href="{% static 'css/geom.css' %}">{% endblock %}
+    <!-- Respuesta-->
+
+    {% block content %}
+    <div class="answer">
+    </div>
+    <section class="figures">
+        <div class="box">
+            <div class="box-header">Cuadrado</div>
+            <div class="box-main">
+                <p class="box-main__text">Calcula el área y el perimetro de un Cuadrado</p>
+                <img src="{% static 'img/cuadrado.jpg' %}" alt="">
+                <p class="box-main__text">¿Cuánto mide cada lado de tu Cuadrado?</p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ cuadrado }}    
+                    <input  class="box-main__btn" type="submit" name="cuadrado_area" value="Área"> 
+                    <input  class="box-main__btn" type="submit" name="cuadrado_perimetro" value="Perímetro">
+                    {% if 'cuadrado_area' in request.POST  %} 
+                    <p>El área de Cuadrado es: {{ aux }}</p>
+                    {% elif 'cuadrado_perimetro' in request.POST %}
+                    <p>El Perímetro de Cuadrado es: {{ aux }}</p>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-header">Triángulo</div>
+            <div class="box-main">
+                <p class="box-main__text">Calcula el área y el perimetro de un Triángulo</p>
+                <img src="{% static 'img/triangulo.png' %}" alt="">
+                <p class="box-main__text">¿Cuánto mide cada lado de tu triángulo?</p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ triangulo_p }}    
+                    <input  class="box-main__btn" type="submit" name="triangulo_perimetro" value="Perímetro">
+                    {% if 'triangulo_perimetro' in request.POST  %} 
+                    <p>El perímetro de Cuadrado es: {{ aux }}</p>
+                    {% endif %}
+                </form>
+                <p class="box-main__text">¿Cuánto mide la base y la altura?</p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ triangulo_a }}    
+                    <input  class="box-main__btn" type="submit" name="triangulo_area" value="Área">
+                    {% if 'triangulo_area' in request.POST %}
+                    <p>El área de Cuadrado es: {{ aux }}</p>
+                    {% endif %}
+                </form>                
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-header">Círculo</div>
+            <div class="box-main">
+                <p class="box-main__text">Calcula el área y el perimetro de un Circulo</p>
+                <img src="{% static 'img/circulo.png' %}" alt="">
+                <p class="box-main__text">¿Cuánto mide el radio?</p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ circulo }}    
+                    <input  class="box-main__btn" type="submit" name="circulo_area" value="Área"> 
+                    <input  class="box-main__btn" type="submit" name="circulo_perimetro" value="Perímetro">
+                    <input  class="box-main__btn" type="submit" name="prueba_" value="prueba">
+                
+                    {% if 'circulo_area' in request.POST  %} 
+                    <p>El área del circulo es: {{ aux }}</p>
+                    {% elif 'circulo_perimetro' in request.POST %}
+                    <p>El Perímetro de Cuadrado es: {{ aux }}</p>
+                    {% elif 'prueba_' in request.POST %}
+                    <p>como prueba: {{ l}}</p>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </section>
+    {% endblock  %}
+    

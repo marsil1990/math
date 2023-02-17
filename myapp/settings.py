@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'perfil.apps.PerfilConfig',
     'blog.apps.BlogConfig',
+    'geom.apps.GeomConfig',
     #Django app
     'django.contrib.admin',
     'django.contrib.auth',
