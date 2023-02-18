@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block estilo %} 
+<link rel="stylesheet" href="{% static 'css/estadistica_.css' %}">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endblock %}
+
+{% block content %}
+<main class="box">
+    <h1>CÁLCULOS ESTADÍSTICOS</h1>
+    <h3>Variable cuantitativa</h3>
+    <form action="" class="formulario" method="post">
+        <p>Ingrese los datos separados por una coma, ejemplo: 4,5,6,10,...</p>
+        {% csrf_token %}
+        {{data}}
+        <input  class="box-main__btn" type="submit" name="estadistica"> 
+    </form>
+    <div class="box_moda">
+        <h2>Moda:</h2>
+        <p>Moda o Modo: Es la clase o categoría que tiene la mayor frecuencia relativa (o absoluta). </p>
+        <p>Segun los datos ingresado la moda es: {{moda}}</p>
+        
+    </div>
+
+    <div class="box_mediana">
+        <h2>Mediana:</h2>
+        <p>Es la categoría que acumula el 50 % de las observaciones. Si ordenamos los datos es justo el valor que se encuentra a la mitad</p>
+        <p>Segun los datos ingresado la medinan es: {{mediana}}</p>
+    </div>
+
+    <div class="box_media">
+        <h2>Media:</h2>
+        <p class="box_media-p">Es el promedio matemático. Dos posibles  Fórmulas: \(\bar{x} =\frac{\sum x_i}{N}  \),     \(\bar{x}= \frac{\sum x_i.n_i}{N}  \), donde \( x_i \) representa cada dato,
+            donde \( h_i \) la frecuencia absoluta y N la cantida de datos ingresados.
+        </p>
+        <p class="box_media-p">Segun los datos ingresado la media es: {{media}}</p>
+    </div>
+
+    <div class="box_varianza">
+        <h2>Varianza:</h2>
+        <p>Con el fin de introducir una medida de dispersión de los datos introducimos primero una cantidad
+            para facilitar la definición. Llamamos varianza al promedio ponderado de las distancias cuadradas
+            de cada observación a la media.  Fórmula: \(S^2 = \frac{\sum x_i^2}{N} - \bar{x}^2\)</p>
+            <p>Segun los datos ingresado la varianza es: {{ varianza }}</p>
+    </div>
+
+    <div class="box_desviacion">
+        <h2>Desviación:</h2>
+        <p>El desvío standard se define como la raíz cuadrada de la varianza, se interpreta similar a la
+            desviación media, la distancia promedio entre los valores observados y el valor medio de estos.
+            Sabemos que no es exactamente igual a la desviación media, pero la interpretación va en el
+            mismo sentido, aunque técnicamente no sea del todo correcto. Fórmula \(S = \sqrt{\frac{\sum x_i^2}{N} - \bar{x}^2}\)</p>
+            <p>Segun los datos ingresado la desviación es: {{ desviacion }}</p>
+    </div>
+
+    <div class="box_cf">
+        <h2>Coeficiente de variación:</h2>
+        <p>relaciona la desviación standard con la media, brindando una medida sobre la dispersión relativa
+            del conjunto de observaciones. Se calcula solo cuando los datos son positivos. Fórmula \(CV = \frac{S}{\bar{x}}\)</p>
+            <p>Segun los datos ingresado el CV es: {{ cv }}</p>
+
+        
+           
+    </div>
+   
+</main>
+{% endblock %}
+    

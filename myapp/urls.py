@@ -24,12 +24,15 @@ from django.conf.urls.static import static
 urlpatterns = [
     #core
     path('', include('core.urls')),
+    #estadistica
+    path('est/', include('estadistica.urls')),
     #geom
     path('geom/', include('geom.urls')),
     #blog
     path('blog/', include('blog.urls')),
     #perfil
     path('perfil/', include('perfil.urls')),
+    #admin
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

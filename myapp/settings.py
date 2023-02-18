@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'perfil.apps.PerfilConfig',
     'blog.apps.BlogConfig',
     'geom.apps.GeomConfig',
+    'estadistica.apps.EstadisticaConfig',
     #Django app
     'django.contrib.admin',
     'django.contrib.auth',
