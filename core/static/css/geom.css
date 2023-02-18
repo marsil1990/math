@@ -51,7 +51,7 @@ body{
 
 .box{
     width: 30%;
-    height: 800px;
+    height: 600px;
     border: 3px solid #253062;
     border-radius: 10px;
     margin: 15px;
@@ -117,13 +117,13 @@ body{
 
 
 /*Adaptación a las diferentes resoluciones*/
-@media screen and (max-width:1021px){
+@media screen and (max-width:1041px){
     .figures{
         width: 100%;
     }
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:940px){
     .figures{
         width: 100%;
     }
@@ -133,7 +133,7 @@ body{
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:700px){
     .box{
         width: 90%;
         margin: 20px;
@@ -149,7 +149,7 @@ body{
     }
 }
 
-@media screen and (max-width:360px){
+@media screen and (max-width:400px){
     .box{
         width: 90%;
         margin: 20px;

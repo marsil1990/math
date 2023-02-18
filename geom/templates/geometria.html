@@ -64,14 +64,10 @@
                     {{ circulo }}    
                     <input  class="box-main__btn" type="submit" name="circulo_area" value="Área"> 
                     <input  class="box-main__btn" type="submit" name="circulo_perimetro" value="Perímetro">
-                    <input  class="box-main__btn" type="submit" name="prueba_" value="prueba">
-                
                     {% if 'circulo_area' in request.POST  %} 
                     <p>El área del circulo es: {{ aux }}</p>
                     {% elif 'circulo_perimetro' in request.POST %}
                     <p>El Perímetro de Cuadrado es: {{ aux }}</p>
-                    {% elif 'prueba_' in request.POST %}
-                    <p>como prueba: {{ l}}</p>
                     {% endif %}
                 </form>
             </div>
