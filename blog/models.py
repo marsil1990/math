@@ -4,7 +4,7 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Post(models.Model):
-    image = models.ImageField(upload_to= 'blog')
+    image = models.ImageField() #(upload_to= 'blog') para que se guarde en media/blog
     title = models.CharField(max_length=200)
     desc = models.TextField()
     content = RichTextField()
