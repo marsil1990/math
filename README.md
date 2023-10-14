@@ -4,4 +4,3 @@ Como soy docente de Matemática le iré agregando, al blog, cosas que tengan que
 
 En la parte de perfil le agregaré los nuevos proyectos (páginas más dinámicas) que se me ocurran y en la parte de blogs (entrar ya) información (páginas estáticas principalmente).
 
-https://octopus-app-afbkl.ondigitalocean.app/
